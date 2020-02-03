@@ -1,25 +1,53 @@
 #container {
 	width: 100vw;
-	height: 100vw;
-	position:relative;
-	filter: contrast(100%);
-	transition: filter 0.5s;
+	height: 88vh;
+	align-items: center;
+	display:flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	/* background: black; */
+	background-image: linear-gradient(to bottom right, rgba(131, 77, 235, 0.30), rgba(77, 150, 227, 0.30)), url(../images/background7.jpg);
+	background-repeat: repeat, no-repeat;
+	background-position: center, center;
+	background-size: auto, cover;
+	background-attachment: fixed, fixed;
+	/* transform: scaleX(1.7); */
+	position: relative;
+	/* filter: contrast(100%);
+	transition: filter 0.5s; */
 }
 
+
 #container:after {
+	background-image: url('../images/background_sub.png');
+	background-size: 110% 100%;
+  background-position: center;
+  bottom: -25px;
+  content: '';
+  height: 12rem;
+  left: 1;
+  position: absolute;
+  width: 100vw;
+	transform: scaleY(0.8);
+  box-shadow: inset 0 -1px 0 0 #ffffff;
+}
+
+/* #container:after {
 	content : "";
 	display: block;
 	position: fixed;
-	top: 0;
-	left: 0;
-	background-image: url('../images/background.jpg');
+	top: 0%;
+	right: 0;
+	background-image: url('../images/background7.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	filter:  brightness(50%);
+	filter: brightness(80%) blur(0px);
 	width: 100%;
 	height: 100%;
-	opacity : 0.85;
+	opacity : 0.7;
 	z-index: -1;
-}
+} */
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -43,35 +71,106 @@ section, summary, time, mark, audio, video {
 
 .banner, .profile, .skills, .projects, .contact {
   display: flex;
+	flex-direction: column;
 	height: 100vh;
+	width: 100vw;
   align-items: center;
   justify-content: center;
   font-size: 2.5em;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 200;
 	letter-spacing: 2px;
-	color: #e0e0e0;
+	color: white;
+
 }
+
+.banner p {
+	width: 50vw;
+	font-size: 1.5rem;
+	word-break: break-all;
+	text-align: center;
+}
+
+.banner p:after{
+	display: block;
+	content: '';
+	margin: auto;
+	margin-top: 2em;
+	width:10%;
+	border-width: thin;
+	border-style: solid;
+}
+
+#get-start {
+	display: block;
+	margin-top: 4em;
+	border: none;
+	background-color: #4797ec;
+  padding: 1.2em 2.3em;
+	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 0.05em;
+	font-size: 1rem;
+  background-image: linear-gradient(45deg, rgba(71, 151, 236, 0), #884beb 80%);
+  background-size: auto, auto;
+  background-repeat: repeat, no-repeat;
+  box-shadow: 0 0.5rem 1.75rem 0 rgba(0, 0, 0, 0.25);
+	border-radius: 5em;
+  color: #ffffff !important;
+	cursor: pointer;
+}
+
 
 .profile {
 	background-color: white;
 }
+
+/* .banner h2:after {
+} */
+
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 
 #mySideBtn {
 	position:fixed;
 	right:15px;
 	top:15px;
 	z-index: 2;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-family: 'Open Sans Condensed', sans-serif;
 	letter-spacing: 2px;
 	font-weight: lighter;
-	color: #e0e0e0;
+	color: white;
 }
 
 #mySideBtn:hover {
 	/* transform: scale(1.04); */
-  color: #2e4539;
-	font-weight: bold;
+  color: #f5cd49;
 }
 
 .sidenav {
@@ -81,7 +180,7 @@ section, summary, time, mark, audio, video {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: #63736c; /* Black*/
+  background-color: #bd9176; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 90px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -92,9 +191,9 @@ section, summary, time, mark, audio, video {
 	padding: 10px;
 	padding-left: 20px;
   text-decoration: none;
-  font-size: 1.0em;
+  font-size: 1.1em;
 	font-family: 'Raleway';
-  color: #e0e0e0;
+  color: #424242;
   display: block;
   transition: 0.3s;
 }
@@ -105,7 +204,7 @@ section, summary, time, mark, audio, video {
 	margin-top: 20px;
 	width:200px;
 	border-style: solid;
-	border-image: linear-gradient(to right, #404a45 0%, transparent 100%);
+	border-image: linear-gradient(to right, #967560 0%, transparent 100%);
 	border-image-width: 1px 0 0 0;
 	border-image-slice: 1;
 	/* border: 0.5px solid #1a998e; */
@@ -114,7 +213,7 @@ section, summary, time, mark, audio, video {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
 	transform: scale(1.04);
-  color: #d1b147;
+  color: #f5cd49;
 }
 
 /* Position and style the close button (top right corner) */
